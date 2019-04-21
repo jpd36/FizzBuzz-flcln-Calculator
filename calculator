@@ -1,0 +1,34 @@
+# Jonathan Pham
+# cs2750 
+# 02/23/18
+
+#!/bin/bash
+     echo "----------------------------------"
+     echo "welcome to my calculator"	
+     echo "please enter an operation on the command line:"
+     echo "a followed by 2 numbers to add"
+     echo "s followed by 2 numbers to subtract"
+     echo "m followed by 2 numbers to multiply"
+     echo "d followed by 2 numbers to divide"
+     echo "----------------------------------"
+input=$1
+num1=$2
+num2=$3
+     
+     if [ "$3" = "" ]
+         then
+              echo 'Invald! Please enter a s m or d followed by 2 integer numbers'
+	 elif [ $input = "a" ]
+	 then
+	      total=$((num1+num2))
+         elif [ $input = "s" ]
+         then  
+              total=$((num1-num2))
+         elif [ $input = "d" ]
+         then
+              total=$((num1/num2))
+         elif [ $input = "m" ]
+         then
+              total=$((num1*num2))
+     fi
+     echo "answer: $total"

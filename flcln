@@ -1,0 +1,17 @@
+# Jonathan Pham
+# cs2750 
+# 02/23/18
+
+#!/bin/bash
+
+echo "Files sorts from largest to smallest..."
+du -h --max-depth=0 * | sort -hr
+
+echo -n "Would you like to delete empty files? (y/n)? "
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+	echo "Deleting empty files...";
+	find . -type f -empty -delete;
+else
+	echo "Empty files are not deleted."
+fi
